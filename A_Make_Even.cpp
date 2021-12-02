@@ -102,7 +102,38 @@ int main()
 
     while(t--)
     {
-        
+        ll n;
+        cin>>n;
+
+        if(n%2==0)
+        cout<<0<<endl;
+        else
+        {
+            int f=0;
+            int p=n;
+            int s;
+            while(p)
+            {
+                int k = p%10;
+
+                if(k%2==0)
+                {
+                    f=1;
+                }
+                p/=10;
+                s=k;
+            }
+            
+            if(s%2==0)
+            cout<<1<<endl;
+            else
+            {
+                if(f==0)
+                cout<<-1<<endl;
+                else
+                cout<<2<<endl;
+            }
+        }
     }
     return 0;
 }
