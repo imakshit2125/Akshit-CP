@@ -1,0 +1,1 @@
+{"name":"Local: 2","url":"e:\\Akshit CP\\2.py","tests":[{"id":1638629298733,"input":"4\n1 \n2 \n3 \n4","output":"Initially array is: [1, 2, 3, 4]\nElement is present at index 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Akshit CP\\2.py","group":"local","local":true}
