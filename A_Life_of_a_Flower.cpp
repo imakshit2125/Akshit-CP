@@ -102,37 +102,38 @@ int main()
 
     while(t--)
     {
-       ll n,a,b,k;
-       cin>>n>>a>>b;
+        ll n;cin>>n;
 
-       if(n%2==0)
-        k=(n/2) -1;
-       else 
-        k= (n/2);
+        vector<ll>arr(n);
+        for(int i=0;i<n;i++)
+        cin>>arr[i];
 
-       debug(k);
+        ll ans=1;
 
-       if(a<=k and b<=k)
-       {
-           if(n%2==0)
-           k=n/2 + 1;
-           else
-           k=n/2 + 2;
 
-            debug(k);
-       }
-       else
-       cout<<-1<<endl;
+        for(int i=0;i<arr.size();i++)
+        {
+            if(i==0)
+            {
+                if(arr[i]==1)
+                ans++;
+            }
+            else
+            {
+                if(arr[i]==1 and arr[i-1]==1)
+                ans+=5;
+                else if(arr[i]==1 and arr[i-1]==0)
+                ans++;
+                else if(arr[i]==0 and arr[i-1]==0)
+                {
+                    ans=-1;
+                    break;
+                }
+                
+            }
+        }
 
-       
+        cout<<ans<<endl;
     }
     return 0;
 }
-/*
-1 2 1 2 1 2
-
-2 1 2 1 2 1
-
-1 2 1 2 1 2 1 
-
-*/
